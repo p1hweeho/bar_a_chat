@@ -1,0 +1,25 @@
+$Fondglobal: #F6E7CB;
+$FontGobal: #856A5D;
+$FontTrans: #4a3d36;
+
+ 
+
+@mixin settings () {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin menu () {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin texte () {
+    font-family: Quicksand;
+    font-size: 20px;
+}
+
+@mixin title () {
+    font-family: Arapey;
+}

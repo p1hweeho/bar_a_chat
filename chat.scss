@@ -1,0 +1,43 @@
+@import "./variable.scss";
+
+* {
+    margin: 0;
+}
+header {
+    background-color: $Fondglobal,;
+}
+nav {
+    @include texte;
+    display: flex;
+    color: $FontGobal;
+}
+.menu {
+    @include menu;
+    list-style: none;
+    font-weight: 500;
+    width: 25%;
+}
+
+.navbarre {
+    width: 100%; 
+    @include settings;
+}
+
+.Logo {
+    width: 100px;
+    height: auto;
+}
+
+
+.Accueil:hover {
+    color: $FontTrans;
+}
+
+.NosChat:hover {
+    color: $FontTrans;
+}
+
+.Menubar:hover {
+    color: $FontTrans;
+}
+

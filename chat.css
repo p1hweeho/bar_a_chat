@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+}
+
+header {
+  background-color: #F6E7CB;
+}
+
+nav {
+  font-family: Quicksand;
+  font-size: 20px;
+  display: flex;
+  color: #856A5D;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-weight: 500;
+  width: 25%;
+}
+
+.navbarre {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Logo {
+  width: 100px;
+  height: auto;
+}
+
+.Accueil:hover {
+  color: #4a3d36;
+}
+
+.NosChat:hover {
+  color: #4a3d36;
+}
+
+.Menubar:hover {
+  color: #4a3d36;
+}/*# sourceMappingURL=chat.css.map */
