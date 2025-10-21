@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Quicksand:wght@700&display=swap');
+
+$Fondglobal: #F6E7CB;
+$FontGlobal: #856A5D;
+$FontTrans: #4a3d36;
+$Bouton: #856A5D;
+$BoutonHover: #4a3d36;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: $Fondglobal;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  position: relative;
+}
+
+.Logo {
+  position: absolute;
+  left: -70px;
+  width: 200px;
+  height: auto;
+}
+
+/* Bouton Réserver */
+.bouton-reserver {
+  position: absolute;
+  right: -60px;
+  padding: 10px 25px;
+  background-color: $Bouton;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bouton-reserver:hover {
+  background-color: $BoutonHover;
+  transform: scale(1.05);
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: $FontGlobal;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: $FontTrans;
+}
+
+/* ---------- SECTION CHATS ---------- */
+.chats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 5px;
+  background: #F6E7CB;
+}
+
+.chat {
+  position: relative;
+  background: #3b0000;
+}
+
+.chat img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.noschats {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.nom {
+  font-family: 'Arapey', serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+.desc {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0.2rem 0 0;
+}
