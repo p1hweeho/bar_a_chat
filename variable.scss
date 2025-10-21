@@ -1,12 +1,15 @@
 $Fondglobal: #F6E7CB;
 $FontGobal: #856A5D;
 $FontTrans: #4a3d36;
+$Bouton: #856A5D;
+$BoutonHover: #4a3d36;
 
  
 
 @mixin settings () {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 @mixin menu () {
@@ -22,4 +25,7 @@ $FontTrans: #4a3d36;
 
 @mixin title () {
     font-family: Arapey;
+    font-size: 45px;
+    color: $FontGobal;
+
 }

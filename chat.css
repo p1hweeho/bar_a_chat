@@ -26,11 +26,48 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .Logo {
   width: 100px;
   height: auto;
+}
+
+.bouton-reserver {
+  position: absolute;
+  right: -60px;
+  padding: 10px 25px;
+  background-color: #856A5D;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bouton-reserver:hover {
+  background-color: #4a3d36;
+  transform: scale(1.05);
+}
+
+.intro {
+  background-image: url(./Header.png);
+  background-size: cover;
+  background-position: center center;
+  height: 611px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Jouer {
+  font-family: Arapey;
+  font-size: 45px;
+  color: #856A5D;
 }
 
 .Accueil:hover {

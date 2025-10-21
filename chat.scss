@@ -1,34 +1,87 @@
-@import "./variable.scss";
+@use "./variable";
 
 * {
-    margin: 0;
-}
-header {
-    background-color: $Fondglobal,;
-}
-nav {
-    @include texte;
-    display: flex;
-    color: $FontGobal;
-}
-.menu {
-    @include menu;
-    list-style: none;
-    font-weight: 500;
-    width: 25%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbarre {
-    width: 100%; 
-    @include settings;
+
+header {
+  background-color: $Fondglobal;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  position: relative;
 }
 
 .Logo {
-    width: 100px;
-    height: auto;
+  position: absolute;
+  left: -70px;
+  width: 200px;
+  height: auto;
 }
 
 
+.bouton-reserver {
+  position: absolute;
+  right: -60px;
+  padding: 10px 25px;
+  background-color: $Bouton;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bouton-reserver:hover {
+  background-color: $BoutonHover;
+  transform: scale(1.05);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: $FontGlobal;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: $FontTrans;
+}
+
+.intro {
+    background-image: url(./Header.png);
+    background-size: cover;
+    background-position: center center;
+    height: 611px;
+    @include settings;
+
+}
+
+.Jouer {
+    @include title;
+}
 .Accueil:hover {
     color: $FontTrans;
 }
