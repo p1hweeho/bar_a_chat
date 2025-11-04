@@ -1,0 +1,176 @@
+<!-- reserver.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Réserver — MeowMood</title>
+  <link rel="stylesheet" href="reserver.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Arapey&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="reserver">
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <img class="Logo" src="./dossierphotochats/EBA35C6B-AF09-4070-A77E-F911AA7EF994_4_5005_c.jpeg" alt="logo MeowMood">
+      <ul class="menu">
+        <li><a href="index.html">ACCUEIL</a></li>
+        <li><a href="nos-chats.html">NOS CHATS</a></li>
+        <li><a href="menu.html">MENU</a></li>
+      </ul>
+      <button class="bouton-reserver" onclick="window.location.href='reserver.html'">RÉSERVER</button>
+    </nav>
+  </header>
+
+  <!-- CARROUSEL -->
+  <section class="resa">
+    <h2 class="titre-reserv">NOTRE ÉQUIPE</h2>
+    <div class="railsnap" id="railsnap">
+      <div class="card">
+        <img src="./dossierphotochats/6F1E823B-B3EA-4F06-8B9C-7D0A05A12AB8.jpeg" alt="">
+        <div class="txt">
+          <h4>LEILA</h4>
+          <p>Amoureuse de la culture japonaise</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./dossierphotochats/13FED001-2DE2-424C-BAD4-31DFA6ABBF4A.jpeg" alt="">
+        <div class="txt">
+          <h4>ANDY</h4>
+          <p>Aime les chats plus que sa voiture</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./dossierphotochats/725EA5AF-253D-4FDA-A8AD-8ACB806FBE1F.jpeg" alt="">
+        <div class="txt">
+          <h4>MATHIS</h4>
+          <p>Possède 3 chats à la maison</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./dossierphotochats/20165A84-3F7E-4946-B697-3BE221E29210.jpeg" alt="">
+        <div class="txt">
+          <h4>LEA</h4>
+          <p>Une grande rêveuse</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    const rail = document.getElementById('railsnap');
+    if (!rail) return;
+    const items = Array.from(rail.children);
+    items.forEach(el => rail.appendChild(el.cloneNode(true)));
+    let running = true, pos = 0;
+    const speed = 0.6;
+    function loop() {
+      if (!running) return;
+      if (rail.scrollWidth > rail.clientWidth) {
+        pos += speed;
+        const half = rail.scrollWidth / 2;
+        if (pos >= half) pos = 0;
+        rail.scrollLeft = pos;
+      }
+      requestAnimationFrame(loop);
+    }
+    rail.addEventListener('mouseenter', () => running = false);
+    rail.addEventListener('mouseleave', () => { if (!running) { running = true; requestAnimationFrame(loop); }});
+    requestAnimationFrame(loop);
+  })();
+  </script>
+
+  <!-- GRILLE CHATS -->
+  <section class="grille-chats">
+    <h2 class="grille-titre">NOS CHATS</h2>
+    <ul class="grille">
+      <li class="carte">
+        <img src="./dossierphotochats/0F3E658E-907B-41C0-9786-19E8A2D44AFA.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat1" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/070DD762-BCC7-44D9-8A66-4AE2BA2AAE58.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat2" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/82FE5A45-3CA8-4BC0-947E-5FAD5B3723F5.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat3" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/30380AE3-3FB3-434A-B984-7815D08103D7.png" alt="" class="carte-img">
+        <div class="carte-texte">
+         
+        </div>
+        <a href="reserver.html#chat4" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/A15ACE97-04F4-4553-BE25-A222AAF6F7BC.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat5" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/B8B4A647-DC1F-46BC-B7A4-1950BE65A9E4.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat6" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/4747D7E4-2DF5-4975-9103-C288CE723E0D.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat7" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/F07F764D-E071-40C1-8E4C-76A402B6C269.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat8" class="carte-action">réserver avec ce chat</a>
+      </li>
+      <li class="carte">
+        <img src="./dossierphotochats/C7548AB7-7E4F-4FF6-9779-8B0E4E43654F.png" alt="" class="carte-img">
+        <div class="carte-texte">
+          
+        </div>
+        <a href="reserver.html#chat9" class="carte-action">réserver avec ce chat</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <h2 class="map-title">NOUS TROUVER</h2>
+    <p class="map-address">27 rue de la place<br>74000 Annecy</p>
+    <div class="map-hours">
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lun–Ven : 09h00 – 19h00</li>
+        <li>Sam : 10h00 – 20h00</li>
+        <li>Dim : 10h00 – 18h00</li>
+      </ul>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.68863653616!2d6.123744415702161!3d45.89924787910806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba8fde0fd494f%3A0x408ab2ae4beef50!2sAnnecy!5e0!3m2!1sfr!2sfr!4v1697041234567!5m2!1sfr!2sfr"
+        width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+</body>
+</html>
