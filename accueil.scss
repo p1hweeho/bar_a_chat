@@ -218,15 +218,13 @@ nav {
 }
 
 .infos {
-  
-    background: $Fondglobal;
-    padding: 36px 0;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
-  }
+  background: #856A5D; 
+  padding: 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
+}
 
 .infos__grid {
   max-width: 1100px;
