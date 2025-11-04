@@ -25,24 +25,6 @@ header {
     column-gap: 24px;
   }
 
-  .Logo {
-    width: 200px;
-    height: auto;
-  }
-
-  .menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: $FontGlobal;
-
-    li { cursor: pointer; transition: color .2s ease; }
-    li:hover { color: $FontTrans; }
-  }
 
   .bouton-reserver {
     padding: 10px 25px;
