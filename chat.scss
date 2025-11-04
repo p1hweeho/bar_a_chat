@@ -154,7 +154,7 @@ nav {
 
 .drinks {
     display: flex;
-    flex-direction: row; // Vos styles
+    flex-direction: row; 
     justify-content: center; 
     gap: 37px; 
     padding-bottom: 25px;
@@ -211,4 +211,97 @@ nav {
 
 .boissons-prix {
   @include boissons-prix;
+}
+
+.topping {
+  width: 100%;
+  background-color: #55443a;  
+  display: flex;
+  justify-content: center;
+  padding: 30px; 
+  margin-top: 35px;
+  color: #F6E7CB; 
+}
+
+.les-toppings {
+  color: #F6E7CB;
+  font-family: Arapey;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal; 
+}
+
+.topping-global {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0px 93px;
+}
+.topping-text {
+  color: #F6E7CB;
+  font-family: Quicksand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+}
+.prix {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-topping {
+  display: flex;
+  align-items: center;
+}
+
+.friandise {
+    display: flex;
+    flex-direction: row; // Vos styles
+    justify-content: center; 
+    gap: 37px; 
+    padding-bottom: 25px;
+}
+
+
+.nos-friandise {
+  @include title;
+  text-align: center;
+  padding: 63px 0px 43px 0px;
+}
+
+.cards-friandise {
+  @include lesfriandisesdeux;
+}
+
+.friandise-titres {
+  @include friandise-titre;
+  margin-top: 19px;
+}
+
+.friandises-text {
+  @include friandise-text;
+  margin: 10px 0px 10px 0px;
+}
+
+.friandises-prix {
+  @include friandise-prix;
+}
+
+.card-friandise {
+  @include lesfriandises;
+}
+.friandise-titre{
+  @include friandises-titre;
+  margin-top: 19px;
+}
+
+.friandise-text {
+  @include friandises-text;
+  margin: 10px 0px 10px 0px;
+}
+
+.friandise-prix {
+  @include friandises-prix;
 }

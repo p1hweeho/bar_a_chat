@@ -44,6 +44,15 @@ $BoutonHover: #4a3d36;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+@mixin lesfriandises () {
+    width: 348px;
+    height: 520px;
+    border-radius: 18px;
+    background: #4A3D36; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 @mixin lesboissonsdeux () {
     width: 348px;
     height: 520px;
@@ -53,7 +62,27 @@ $BoutonHover: #4a3d36;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+@mixin lesfriandisesdeux () {
+    width: 348px;
+    height: 520px;
+    border-radius: 18px;
+    background: #F6E7CB; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 @mixin boissons-titres () {
+    color: #4A3D36;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    
+}
+
+@mixin friandise-titre () {
     color: #4A3D36;
     text-align: center;
     font-family: Quicksand;
@@ -74,7 +103,28 @@ $BoutonHover: #4a3d36;
     line-height: normal;
 }
 
+@mixin friandises-titre () {
+    color: #F6E7CB;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
 @mixin boisson-text () {
+    color: #F6E7CB;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin friandises-text () {
     color: #F6E7CB;
     text-align: center;
     font-family: Quicksand;
@@ -94,6 +144,16 @@ $BoutonHover: #4a3d36;
     line-height: normal;
 }
 
+@mixin friandise-text () {
+    color: #4A3D36;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 @mixin boisson-prix () {
     color: #F6E7CB;
     text-align: center;
@@ -104,7 +164,27 @@ $BoutonHover: #4a3d36;
     line-height: normal;
 }
 
+@mixin friandises-prix () {
+    color: #F6E7CB;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 @mixin boissons-prix () {
+    color: #4A3D36;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin friandise-prix () {
     color: #4A3D36;
     text-align: center;
     font-family: Quicksand;
