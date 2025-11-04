@@ -1,5 +1,5 @@
 $Fondglobal: #F6E7CB;
-$FontGobal: #856A5D;
+$FontGlobal: #856A5D;
 $FontTrans: #4a3d36;
 $Bouton: #856A5D;
 $BoutonHover: #4a3d36;
@@ -23,9 +23,93 @@ $BoutonHover: #4a3d36;
     font-size: 20px;
 }
 
+@mixin texte_deux () {
+    font-family: Quicksand;
+    font-size: 20px;
+    color: white;
+}
 @mixin title () {
     font-family: Arapey;
     font-size: 45px;
-    color: $FontGobal;
+    font-weight: 800;
+    color: $FontGlobal;
+}
 
+@mixin lesboissons () {
+    width: 348px;
+    height: 520px;
+    border-radius: 18px;
+    background: #4A3D36; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@mixin lesboissonsdeux () {
+    width: 348px;
+    height: 520px;
+    border-radius: 18px;
+    background: #F6E7CB; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@mixin boissons-titres () {
+    color: #4A3D36;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    
+}
+
+@mixin boisson-titre () {
+    color: #F6E7CB;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@mixin boisson-text () {
+    color: #F6E7CB;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin boissons-text () {
+    color: #4A3D36;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin boisson-prix () {
+    color: #F6E7CB;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin boissons-prix () {
+    color: #4A3D36;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }

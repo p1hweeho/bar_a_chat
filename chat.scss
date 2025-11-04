@@ -1,4 +1,4 @@
-@use "./variable";
+@import "./variable.scss";
 
 * {
   margin: 0;
@@ -76,21 +76,133 @@ nav {
     background-position: center center;
     height: 611px;
     @include settings;
+    display: flex;
+    flex-direction: column;
+    animation: softFade 1.5s ease-in-out;
+}
 
+@keyframes softFade {
+  0% {
+    opacity: 0;
+    filter: brightness(0.7) contrast(1.1) saturate(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.05) contrast(1) saturate(1);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) contrast(1) saturate(1);
+  }
 }
 
 .Jouer {
     @include title;
+    margin-bottom: 31px;
+    animation: textReveal 1.2s ease-out 0.8s forwards;
+
 }
-.Accueil:hover {
-    color: $FontTrans;
+.premier {
+    @include texte;
+    width: 615px;
+    height: 150px;
+    flex-shrink: 0;
+    color: #4a3d36;
+    animation: textReveal 1.2s ease-out 1.1s forwards;
+
 }
 
-.NosChat:hover {
-    color: $FontTrans;
+
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* arrive doucement du bas */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.Menubar:hover {
-    color: $FontTrans;
+.deroule {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
+.texte_fixe {
+    background-color: #856A5D;
+    @include texte_deux; 
+    padding: 10px 0px; 
+    white-space: nowrap; 
+}
+
+.texte_deroulant {
+    display: inline-block; 
+    animation: defilement 10s linear infinite;
+}
+
+@keyframes defilement {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+.drinks {
+    display: flex;
+    flex-direction: row; // Vos styles
+    justify-content: center; 
+    gap: 37px; 
+}
+
+.boissons {
+  @include title;
+  text-align: center;
+  padding: 63px 0px 43px 0px;
+}
+
+.card-boisson {
+  @include lesboissons;
+}
+
+.matcha {
+  border-radius: 18px 18px 0 0;
+}
+
+.cards-boisson {
+  @include lesboissonsdeux;
+}
+
+.boisson-titre {
+    @include boisson-titre;
+    margin-top: 19px;
+
+}
+
+.boissons-titres {
+   @include boissons-titres;
+    margin-top: 19px;
+
+}
+
+.boisson-text {
+  @include boisson-text;
+  margin: 10px 0px 10px 0px;
+}
+
+.boisson-prix {
+  @include boisson-prix;
+}
+
+.boissons-text {
+  @include boissons-text;
+  margin: 10px 0px 10px 0px;
+}
+
+.boissons-prix {
+  @include boissons-prix;
+}
