@@ -361,12 +361,10 @@ nav {
   text-decoration: underline;
 }
 
-/* ============================================== */
-/* --- 1. AJUSTEMENTS POUR TABLETTES (max-width: 1024px) --- */
-/* ============================================== */
+
 @media (max-width: 1024px) {
     
-    /* --- HEADER & NAVIGATION --- */
+    
     nav {
         width: 95%; 
     }
@@ -384,7 +382,7 @@ nav {
         font-size: 14px;
     }
     
-    /* --- SECTION BIENVENUE (HEADER PRINCIPAL) --- */
+    
     .intro {
         height: 500px; 
     }
@@ -396,15 +394,14 @@ nav {
         font-size: 18px;
     }
     
-    /* --- SECTIONS BOISSONS / FRIANDISES (CARROUSELS) --- */
+    
     .drinks, .friandise {
-        /* Permet le défilement horizontal si les cartes débordent */
         overflow-x: scroll; 
         justify-content: flex-start;
         padding: 0 20px; 
-        scroll-snap-type: x mandatory; /* Ajout du snap pour une meilleure UX */
+        scroll-snap-type: x mandatory; 
         
-        /* Masquer la barre de défilement */
+        
         -ms-overflow-style: none;
         scrollbar-width: none;
         &::-webkit-scrollbar {
@@ -412,13 +409,13 @@ nav {
         }
     }
 
-    /* Rend chaque carte snap-alignable */
+    
     .card-boisson, .cards-boisson, .card-friandise, .cards-friandise {
         flex-shrink: 0;
         scroll-snap-align: start;
     }
 
-    /* --- SECTION TOPPINGS --- */
+    
     .t-image { 
         width: 40%;
         margin-left: 5%; 
@@ -434,16 +431,14 @@ nav {
     }
 
     .prix {
-        padding-left: 70px; /* Réduit l'écart de 110px pour que ça tienne */
+        padding-left: 70px; 
     }
 }
 
-/* =========================================== */
-/* --- 2. AJUSTEMENTS POUR MOBILES (max-width: 768px) --- */
-/* =========================================== */
+
 @media (max-width: 768px) {
     
-    /* --- HEADER & NAVIGATION --- */
+    
     header {
         height: auto;
         padding: 15px 0;
@@ -461,7 +456,7 @@ nav {
     }
 
     .menu {
-        /* Les liens de menu s'empilent pour ne pas déborder */
+      
         flex-direction: column; 
         gap: 8px;
         font-size: 16px;
@@ -474,7 +469,7 @@ nav {
         order: 3; 
     }
 
-    /* --- SECTION BIENVENUE --- */
+    
     .intro {
         height: 350px;
         padding-top: 20px;
@@ -495,20 +490,20 @@ nav {
         text-align: center;
     }
     
-    /* --- TEXTE DÉFILANT --- */
+    
     .texte_fixe {
         font-size: 16px;
     }
 
-    /* --- TITRES DE SECTIONS --- */
+   
     .boissons, .nos-friandise {
         padding: 30px 0 15px 0;
         font-size: 2em;
     }
 
-    /* --- SECTIONS CARROUSELS (Empilement vertical demandé) --- */
+    
     .drinks, .friandise {
-        /* Changement clé : Empilement des cartes */
+        
         flex-direction: column; 
         align-items: center; 
         gap: 25px; 
@@ -516,20 +511,19 @@ nav {
         padding: 0; 
     }
     
-    /* Ajustement des tailles des cartes empilées */
+    
     .card-boisson, 
     .cards-boisson, 
     .card-friandise, 
     .cards-friandise { 
-        width: 90%; /* Prend presque toute la largeur */
+        width: 90%; 
         max-width: 350px; 
         height: auto; 
     }
 
-    /* --- SECTION TOPPINGS (Changement d'agencement Image/Texte) --- */
+    
     .topping {
-        flex-direction: column; /* Empile l'image et le texte */
-        padding: 30px 0;
+        flex-direction: column; 
     }
     
     .t-image {
@@ -547,7 +541,7 @@ nav {
 
     .topping-global {
         width: 100%;
-        margin: 0; /* Pas de marge inutile */
+        margin: 0; 
     }
 
     .les-toppings {
@@ -565,9 +559,9 @@ nav {
     }
 
 
-    /* --- FOOTER (Utilise le modèle Grid ajusté) --- */
+    
     .footer__container {
-        grid-template-columns: 1fr; /* Empile tout verticalement */
+        grid-template-columns: 1fr; 
         gap: 15px;
         padding: 0 15px;
     }
