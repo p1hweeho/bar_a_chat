@@ -1,6 +1,4 @@
-/* reserver.scss */
 
-/* RESET + BASE */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
@@ -12,7 +10,7 @@ body {
   font-weight: 400;
 }
 
-/* HEADER (logo gauche, menu centré, bouton droite) */
+
 header {
   background-color: #F6E7CB;
   height: 100px;
@@ -67,7 +65,7 @@ header {
   }
 }
 
-/* CARROUSEL */
+
 $resa-bg: #2a0000;
 $resa-cream: #f6e3c3;
 
@@ -211,19 +209,19 @@ $grid-ink: #2b1a12;
     justify-self: end;
     font-family: inherit;
     font-weight: 700;
-    font-size: 16px; /* +++ Taille augmentée */
+    font-size: 16px; 
     text-decoration: none;
     color: #2b1a12;
     background: #f6e3c3;
-    padding: 12px 22px; /* +++ bouton plus grand */
+    padding: 12px 22px; 
     border-radius: 999px;
     white-space: nowrap;
     transition: all .25s ease;
     
     &:hover {
-      background: #d2bda0; /* +++ Couleur au survol */
+      background: #d2bda0; 
       color: #1a0e08;
-      transform: scale(1.05); /* +++ petit zoom au hover */
+      transform: scale(1.05); 
     }
   }
   
