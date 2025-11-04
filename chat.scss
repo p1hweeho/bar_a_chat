@@ -52,6 +52,10 @@ nav {
 }
 
 .menu {
+  a {
+    text-decoration: none;
+    color: #4A3D36;
+  }
   list-style: none;
   display: flex;
   gap: 60px;

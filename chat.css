@@ -56,6 +56,10 @@ nav {
   font-size: 20px;
   color: #856A5D;
 }
+.menu a {
+  text-decoration: none;
+  color: #4A3D36;
+}
 
 .menu li {
   cursor: pointer;
