@@ -103,6 +103,55 @@ header .bouton-reserver:hover {
   }
 }
 /* ============ GRILLE CHATS ============ */
+.Logo {
+  position: absolute;
+  left: 20px;
+  width: 200px;
+  height: auto;
+}
+
+/* Bouton Réserver */
+.bouton-reserver {
+  position: absolute;
+  right: 20px;
+  padding: 10px 25px;
+  background-color: #856A5D;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bouton-reserver:hover {
+  background-color: #4a3d36;
+  transform: scale(1.05);
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #856A5D;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: #4a3d36;
+}
+
+/* ---------- SECTION CHATS ---------- */
 .chats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
