@@ -157,6 +157,7 @@ nav {
     flex-direction: row; // Vos styles
     justify-content: center; 
     gap: 37px; 
+    padding-bottom: 25px;
 }
 
 .boissons {
@@ -175,6 +176,10 @@ nav {
 
 .cards-boisson {
   @include lesboissonsdeux;
+}
+
+.card.boisson {
+  @include lesboissons;
 }
 
 .boisson-titre {
@@ -201,6 +206,7 @@ nav {
 .boissons-text {
   @include boissons-text;
   margin: 10px 0px 10px 0px;
+  
 }
 
 .boissons-prix {
