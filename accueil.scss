@@ -3,6 +3,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden; 
 }
 * {
   box-sizing: border-box;
@@ -10,30 +11,50 @@ html, body {
 
 header {
   background-color: $Fondglobal;
-  height: 100px;
+  min-height: 84px; 
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  padding: 10px 0; 
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  position: relative;
-}
+  nav {
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    gap: 20px; 
+  }
 
-.Logo {
-  position: absolute;
-  left: -70px;
-  width: 200px;
-  height: auto;
+  .Logo {
+    width: 180px; 
+    height: auto;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    gap: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: $FontGlobal;
+    padding-left: 0; 
+  }
+
+  .menu li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .menu li:hover {
+    color: $FontTrans;
+  }
+  
 }
 
 .bouton-reserver {
-  position: absolute;
-  right: -60px;
   padding: 10px 25px;
   background-color: $Bouton;
   color: white;
@@ -49,25 +70,6 @@ nav {
 .bouton-reserver:hover {
   background-color: $BoutonHover;
   transform: scale(1.05);
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 60px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: $FontGlobal;
-}
-
-.menu li {
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.menu li:hover {
-  color: $FontTrans;
 }
 
 .intro {
@@ -89,8 +91,9 @@ nav {
 
 .premier {
   @include texte;
-  width: 615px;
-  height: 150px;
+  max-width: 615px;
+  width: 90%;
+  height: auto;
   flex-shrink: 0;
   color: #4a3d36;
   animation: textReveal 1.2s ease-out 1.1s forwards;
@@ -149,12 +152,16 @@ nav {
 
 .card-boisson {
   @include lesboissons;
+  width: 300px; 
+  display: flex;
+  flex-direction: column;
 }
 
 .card-boisson img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover; 
 }
 
 .matcha {
@@ -169,10 +176,14 @@ nav {
 .boisson-text {
   @include boisson-text;
   margin: 10px 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-grow: 1; 
 }
 
 .boisson-prix {
   @include boisson-prix;
+  margin-top: auto; 
 }
 
 .section-title {
@@ -186,14 +197,28 @@ nav {
   line-height: 1.5;
 }
 
+.center {
+  text-align: center;
+}
+
+.concept__content,
+.infos__grid,
+.galerie__grid,
+.temoignages__list {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .concept {
   background: #F6E7CB;
   padding: 50px 0;
 }
 
 .concept__content {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 40px;
@@ -202,7 +227,7 @@ nav {
 
 .concept__list {
   margin-top: 12px;
-  padding-left: 0;
+  padding-left: 0; 
   list-style: none;
   color: #4a3d36;
   font-family: Quicksand;
@@ -218,19 +243,15 @@ nav {
 }
 
 .infos {
-  
-    background: $Fondglobal;
-    padding: 36px 0;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
-  }
+  background: #856A5D; 
+  padding: 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
+}
 
 .infos__grid {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -266,19 +287,14 @@ nav {
     right: auto;
     left: auto;
     margin-top: 15px; 
-  }
+}
 
 .galerie {
   background: #F6E7CB;
   padding: 50px 0 30px;
 }
 
-.center {
-  text-align: center;
-}
-
 .galerie__grid {
-  max-width: 1100px;
   margin: 18px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -299,7 +315,6 @@ nav {
 }
 
 .temoignages__list {
-  max-width: 1100px;
   margin: 12px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -328,6 +343,8 @@ nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .footer__social {
@@ -383,5 +400,92 @@ nav {
   }
   .galerie__img {
     height: 260px;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+  .footer__social {
+    justify-content: center;
+    order: 1;
+  }
+  .footer__text {
+    order: 3;
+  }
+  .footer__legal {
+    justify-self: center;
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    nav {
+      grid-template-columns: 1fr auto; 
+      grid-template-rows: auto auto; 
+      gap: 10px;
+      width: 95%; 
+    }
+    .Logo {
+      width: 150px; 
+      grid-column: 1 / 2;
+      grid-row: 1;
+    }
+    .menu {
+      grid-column: 1 / -1; 
+      grid-row: 2; 
+      gap: 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      justify-content: space-around; 
+    }
+    .bouton-reserver {
+      justify-self: end; 
+      grid-column: 2 / 3;
+      grid-row: 1; 
+      padding: 8px 18px;
+      font-size: 14px;
+    }
+  }
+
+  .intro {
+    height: 450px; 
+  }
+  .Jouer {
+    font-size: 2.5em; 
+  }
+  .premier {
+    font-size: 1em; 
+  }
+
+  .concept__img {
+    height: 250px;
+  }
+  .galerie__img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .concept__content,
+  .infos__grid,
+  .galerie__grid,
+  .temoignages__list,
+  .footer__container {
+    padding-left: 10px; 
+    padding-right: 10px;
+  }
+
+  .drinks {
+    gap: 20px; 
+  }
+  .card-boisson {
+    width: 90%; 
+  }
+
+  .Jouer {
+    font-size: 2em; 
   }
 }

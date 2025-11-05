@@ -20,27 +20,6 @@ header nav {
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
-header .Logo {
-  width: 200px;
-  height: auto;
-}
-header .menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: #856A5D;
-}
-header .menu li {
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-header .menu li:hover {
-  color: #4a3d36;
-}
 header .bouton-reserver {
   padding: 10px 25px;
   background-color: #856A5D;
